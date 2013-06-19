@@ -135,7 +135,7 @@ $wgResourceLoaderMaxQueryLength = -1;
 # Use WikiEditor extension
 require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 
-$wgDefaultUserOptions[wikieditor-preview'] = 1;
+$wgDefaultUserOptions['wikieditor-preview'] = 1;
 $wgDefaultUserOptions['wikieditor-publish'] = 1;
 
 
