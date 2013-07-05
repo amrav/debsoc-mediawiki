@@ -153,4 +153,5 @@ $wgSMTP = array(
 	'auth' => true
 );
 
+# Show the logo
 $wgLogo = "$IP/resources/debsoc.jpg";
