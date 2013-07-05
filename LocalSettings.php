@@ -152,3 +152,5 @@ $wgSMTP = array(
 	'port' => '587',
 	'auth' => true
 );
+
+$wgLogo = '$IP/images/debsoc.jpg';
