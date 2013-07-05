@@ -139,7 +139,7 @@ $wgResourceLoaderMaxQueryLength = -1;
 #$wgDefaultUserOptions['wikieditor-publish'] = 1;
 
 # Use ckeditor
-require_once("$IP/extensions/WSIWYG/WYSIWYG.php");
+require_once("$IP/extensions/WYSIWYG/WYSIWYG.php");
 $wgGroupPermissions['*']['wysiwyg']=true;
 
 require_once 'Mail.php';
