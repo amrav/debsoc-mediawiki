@@ -18,8 +18,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "Debsoc, IIT KGP";
-$wgMetaNamespace = "Debsoc,_IIT_KGP";
+$wgSitename = "Debsoc Wiki";
+$wgMetaNamespace = "Debsoc_Wiki";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -42,40 +42,34 @@ $wgLogo             = "$wgStylePath/common/images/wiki.png";
 ## UPO means: this is also a user preference option
 
 $wgEnableEmail = true;
-$wgEnableUserEmail = true; # UPO
+$wgEnableUserEmail = false; # UPO
 
-$wgEmergencyContact = "apache@debsoc-wiki.herokuapp.com";
-$wgPasswordSender = "apache@debsoc-wiki.herokuapp.com";
+$wgEmergencyContact = "apache@debsoc-mediawiki.herokuapp.com";
+$wgPasswordSender = "apache@debsoc-mediawiki.herokuapp.com";
 
 $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
-$_wgDBConnectionString = getenv('DATABASE_URL');
-if (preg_match('%(.*?)://([^:]+):([^@]+)@([^:]+):(\d+)/(.*)%', $_wgDBConnectionString, $regs, PREG_OFFSET_CAPTURE)) {
-$wgDBtype = $regs[1][0];
-$wgDBuser = $regs[2][0];
-$wgDBpassword = $regs[3][0];
-$wgDBserver = $regs[4][0];
-$wgDBport = $regs[5][0];
-$wgDBname = $regs[6][0];
-} else {
-die("Failed to parse DB connection string");
-}
+$wgDBtype = "postgres";
+$wgDBserver = "ec2-107-20-201-165.compute-1.amazonaws.com";
+$wgDBname = "d5r8fqo340jkvs";
+$wgDBuser = "xrfmksvqdgxofe";
+$wgDBpassword = "e0d_glrqql3HN7lbQgU3PV_WXD";
 
 # Postgres specific settings
-
+$wgDBport = "5432";
 $wgDBmwschema = "mediawiki";
 
 ## Shared memory settings
-$wgMainCacheType = CACHE_NONE;
-$wgMemCachedServers = array();
+$wgMainCacheType = CACHE_MEMCACHED;
+$wgMemCachedServers = array( 'mc1.dev.ec2.memcachier.com:11211' );
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
 $wgEnableUploads = false;
-$wgUseImageMagick = false;
+$wgUseImageMagick = true;
 $wgImageMagickConvertCommand = "/usr/bin/convert";
 
 # InstantCommons allows wiki to use images from http://commons.wikimedia.org
@@ -100,11 +94,11 @@ $wgShellLocale = "en_US.utf8";
 # Site language code, should be one of the list in ./languages/Names.php
 $wgLanguageCode = "en";
 
-$wgSecretKey = "be4a25f380f0277a08202c5c158d734fec00cf2e7e78d37dd1fbcb4414b268c0";
+$wgSecretKey = "240dd29b9d3665f84ba0e32f97757c4c86e04bdd08c3020254ecce1290d4ca91";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "f30977b2abb6c40f";
+$wgUpgradeKey = "56f8cd39d8b639c7";
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'standard', 'nostalgia', 'cologneblue', 'monobook', 'vector':
@@ -128,31 +122,12 @@ $wgDiff3 = "/usr/bin/diff3";
 $wgResourceLoaderMaxQueryLength = -1;
 
 
+# Enabled Extensions. Most extensions are enabled by including the base extension file here
+# but check specific extension documentation for more details
+# The following extensions were automatically enabled:
+require_once( "$IP/extensions/WYSIWYG/WYSIWYG.php" );
+
 
 # End of automatically generated settings.
 # Add more configuration options below.
 
-# Use WikiEditor extension
-#require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
-
-#$wgDefaultUserOptions['wikieditor-preview'] = 1;
-#$wgDefaultUserOptions['wikieditor-publish'] = 1;
-
-# Use ckeditor
-require_once("$IP/extensions/WYSIWYG/WYSIWYG.php");
-$wgGroupPermissions['*']['wysiwyg']=true;
-
-# Use sendgrid to send email
-#require_once 'Mail.php';
-
-# $wgSMTP = array(
-# 	'host' => 'smtp.sendgrid.net',
-# 	'username' => getenv("SENDGRID_USERNAME"),
-# 	'password' => getenv("SENDGRID_PASSWORD"),
-# 	'IDHost' => 'heroku.com',
-# 	'port' => '587',
-# 	'auth' => true
-# );
-
-# Show the logo
-$wgLogo = "$IP/resources/debsoc.jpg";
