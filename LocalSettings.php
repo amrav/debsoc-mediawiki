@@ -133,10 +133,14 @@ $wgResourceLoaderMaxQueryLength = -1;
 # Add more configuration options below.
 
 # Use WikiEditor extension
-require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
+#require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 
-$wgDefaultUserOptions['wikieditor-preview'] = 1;
-$wgDefaultUserOptions['wikieditor-publish'] = 1;
+#$wgDefaultUserOptions['wikieditor-preview'] = 1;
+#$wgDefaultUserOptions['wikieditor-publish'] = 1;
+
+# Use ckeditor
+require_once("$IP/extensions/WSIWYG/WYSIWYG.php");
+$wgGroupPermissions['*']['wysiwyg']=true;
 
 require_once 'Mail.php';
 
