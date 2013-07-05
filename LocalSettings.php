@@ -30,7 +30,7 @@ $wgScriptPath = "";
 $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://debsoc-wiki.herokuapp.com";
+$wgServer = "http://debsoc-mediawiki.herokuapp.com";
 
 ## The relative URL path to the skins directory
 $wgStylePath = "$wgScriptPath/skins";
@@ -74,8 +74,8 @@ $wgMemCachedServers = array();
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
-$wgEnableUploads = true;
-$wgUseImageMagick = true;
+$wgEnableUploads = false;
+$wgUseImageMagick = false;
 $wgImageMagickConvertCommand = "/usr/bin/convert";
 
 # InstantCommons allows wiki to use images from http://commons.wikimedia.org
@@ -142,6 +142,7 @@ $wgResourceLoaderMaxQueryLength = -1;
 require_once("$IP/extensions/WYSIWYG/WYSIWYG.php");
 $wgGroupPermissions['*']['wysiwyg']=true;
 
+# Use sendgrid to send email
 require_once 'Mail.php';
 
 $wgSMTP = array(
