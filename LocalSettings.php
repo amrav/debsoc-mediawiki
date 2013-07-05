@@ -138,4 +138,13 @@ require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 $wgDefaultUserOptions['wikieditor-preview'] = 1;
 $wgDefaultUserOptions['wikieditor-publish'] = 1;
 
+require_once 'Mail.php';
 
+$wgSMTP = array(
+	'host' => 'smtp.mandrillapp.com',
+	'username' => getenv("MANDRILL_USERNAME"),
+	'password' => getenv("MANDRILL_APIKEY"),
+	'IDHost' => 'heroku.com',
+	'port' => '587',
+	'auth' => true
+);
