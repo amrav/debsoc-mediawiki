@@ -342,7 +342,7 @@ class CKeditor_MediaWiki {
 	 */
 	public static function onGetPreferences( $user, &$preferences ){
 		global $wgDefaultUserOptions;
-		wfLoadExtensionMessages( 'CKeditor' );
+		# wfLoadExtensionMessages( 'CKeditor' );
 
 		$preferences['riched_disable'] = array(
 			'type' => 'toggle',
@@ -529,7 +529,7 @@ HEREDOC;
 			$showSource = true;
 		}
 
-		wfLoadExtensionMessages( 'CKeditor' );
+		# wfLoadExtensionMessages( 'CKeditor' );
 		$script .= '
 var showFCKEditor = ' . $this->showFCKEditor . ';
 var loadSTBonStartup = '. $this->loadSTBonStartup . ';
