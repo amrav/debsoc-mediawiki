@@ -109,7 +109,7 @@ $wgUpgradeKey = "f30977b2abb6c40f";
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'standard', 'nostalgia', 'cologneblue', 'monobook', 'vector':
-$wgDefaultSkin = "vector";
+#$wgDefaultSkin = "vector";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
@@ -157,3 +157,11 @@ $wgGroupPermissions['*']['wysiwyg']=true;
 
 # Show the logo
 $wgLogo = "$IP/resources/debsoc.jpg";
+
+# Don't allow users to change the skin
+$wgHiddenPrefs[] = 'skin';
+
+# Use strapping skin
+require_once( "$IP/skins/strapping/strapping.php" );
+$wgDefaultSkin = "strapping";
+
