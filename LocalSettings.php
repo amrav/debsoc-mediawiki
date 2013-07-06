@@ -156,7 +156,7 @@ $wgSMTP = array(
 );
 
 # Show the logo
-$wgLogo = "$IP/skins/common/images/debsoc.jpg";
+$wgLogo = "{$wgStylePath}/common/images/debsoc.jpg";
 
 # Don't allow users to change the skin
 $wgHiddenPrefs[] = 'skin';
@@ -170,3 +170,4 @@ $wgDefaultUserOptions['showtoc'] = 0;
 
 # Need to be logged in to edit
 $wgGroupPermissions['*']['edit']=false;
+
