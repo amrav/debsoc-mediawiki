@@ -61,7 +61,7 @@ $wgDBserver = $regs[4][0];
 $wgDBport = $regs[5][0];
 $wgDBname = $regs[6][0];
 } else {
-die("Failed to parse DB connection string");
+die("Failed to parse DB connection string: $_wgDBConnectionString");
 }
 
 # Postgres specific settings
@@ -144,16 +144,16 @@ require_once("$IP/extensions/WYSIWYG/WYSIWYG.php");
 $wgGroupPermissions['*']['wysiwyg']=true;
 
 # Use sendgrid to send email
-#require_once 'Mail.php';
+require_once 'Mail.php';
 
-# $wgSMTP = array(
-# 	'host' => 'smtp.sendgrid.net',
-# 	'username' => getenv("SENDGRID_USERNAME"),
-# 	'password' => getenv("SENDGRID_PASSWORD"),
-# 	'IDHost' => 'heroku.com',
-# 	'port' => '587',
-# 	'auth' => true
-# );
+$wgSMTP = array(
+	'host' => 'smtp.sendgrid.net',
+	'username' => getenv("SENDGRID_USERNAME"),
+	'password' => getenv("SENDGRID_PASSWORD"),
+	'IDHost' => 'heroku.com',
+	'port' => '587',
+	'auth' => true
+);
 
 # Show the logo
 $wgLogo = "$IP/resources/debsoc.jpg";
