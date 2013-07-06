@@ -41,7 +41,7 @@ if (file_exists('strapping/fonts.css')) {
 }
 
 # Default options to customize skin
-$wgStrappingSkinLogoLocation = 'navbar';
+$wgStrappingSkinLogoLocation = 'bodycontent';
 $wgStrappingSkinLoginLocation = 'navbar';
 $wgStrappingSkinAnonNavbar = true;
 $wgStrappingSkinUseStandardLayout = false;
