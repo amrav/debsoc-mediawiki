@@ -217,8 +217,18 @@ class StrappingTemplate extends BaseTemplate {
       }
 
       ?>
-
+            <li class="dropdown" id="p-createaccount" class="vectorMenu<?php if ( count($theData) == 0 ) echo ' emptyPortlet'; ?>">
+              <?php if ( array_key_exists('createaccount', $theData) ) {
+                echo $this->makeListItem( 'createaccount', $theData['createaccount'] );
+              } ?>
+            </li>
+            <li class="dropdown" id="p-login" class="vectorMenu<?php if ( count($theData) == 0 ) echo ' emptyPortlet'; ?>">
+            <?php if ( array_key_exists('login', $theData) ) {
+                echo $this->makeListItem( 'login', $theData['login'] );
+            } ?>
+            </li>
       </ul>
+      
 
     </section>
     </div>
