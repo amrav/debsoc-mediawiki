@@ -215,6 +215,15 @@ class StrappingTemplate extends BaseTemplate {
       if ($wgSearchPlacement['nav']) {
         $this->renderNavigation( array( 'SEARCHNAV' ) );
       }
+          $theMsg = 'personaltools';
+          $theData = $this->getPersonalTools();
+          $theTitle = $this->data['username'];
+          $showPersonal = false;
+          foreach ( $theData as $key => $item ) {
+            if ( !preg_match('/(notifications|login|createaccount)/', $key) ) {
+              $showPersonal = true;
+            }
+          }
 
       ?>
             <li class="dropdown" id="p-createaccount" class="vectorMenu<?php if ( count($theData) == 0 ) echo ' emptyPortlet'; ?>">
