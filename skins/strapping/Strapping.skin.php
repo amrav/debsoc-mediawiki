@@ -730,12 +730,7 @@ class StrappingTemplate extends BaseTemplate {
 
                 <li class="<?php echo $navClasses ?>"><?php echo $this->makeLink($key, $val); ?></li><?php
             }
-            if ( $wgStrappingSkinDisplaySidebarNavigation ) {?>                </ul>              </li>
-	    <form class="navbar-search" action="<?php $this->text( 'wgScript' ) ?>" id="searchform">
-              <input id="searchInput" class="search-query" type="search" accesskey="f" title="<?php $this->text('searchtitle'); ?>" placeholder="<?php $this->msg('search'); ?>" name="search" value="<?php echo htmlspecialchars ($this->data['search']); ?>">
-              <?php echo $this->makeSearchButton( 'fulltext', array( 'id' => 'mw-searchButton', 'class' => 'searchButton btn hidden' ) ); ?>
-            </form>
-	    <?php
+            if ( $wgStrappingSkinDisplaySidebarNavigation ) {?>                </ul>              </li><?php
             }          }
         break;
 

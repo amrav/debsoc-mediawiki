@@ -48,3 +48,4 @@ $wgStrappingSkinUseStandardLayout = false;
 $wgStrappingSkinDisplaySidebarNavigation = false;
 # Show print/export in navbar by default
 #$wgStrappingSkinSidebarItemsInNavbar = array( 'coll-print_export' );
+$wgSearchPlacement['nav'] = true;
