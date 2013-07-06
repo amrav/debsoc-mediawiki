@@ -167,3 +167,6 @@ $wgDefaultSkin = "strapping";
 
 # Don't show TOC
 $wgDefaultUserOptions['showtoc'] = 0;
+
+# Need to be logged in to edit
+$wgGroupPermissions['*']['edit']=false;
