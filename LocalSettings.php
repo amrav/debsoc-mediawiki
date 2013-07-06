@@ -165,3 +165,5 @@ $wgHiddenPrefs[] = 'skin';
 require_once( "$IP/skins/strapping/strapping.php" );
 $wgDefaultSkin = "strapping";
 
+# Don't show TOC
+$wgDefaultUserOptions['showtoc'] = 0;
