@@ -171,3 +171,6 @@ $wgDefaultUserOptions['showtoc'] = 0;
 # Need to be logged in to edit
 $wgGroupPermissions['*']['edit']=false;
 
+# Raw HTML upload
+# Hope no one does something stupid with this
+$wgRawHtml = true;
