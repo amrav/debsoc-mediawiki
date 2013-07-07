@@ -677,7 +677,7 @@ class StrappingTemplate extends BaseTemplate {
             if ( !$content ) {
               continue;
             }
-            if ( !in_array( $name, $wgStrappingSkinSidebarItemsInNavbar ) ) {
+            if ( $wgStrappingSkinSidebarItemsInNavbar && !in_array( $name, $wgStrappingSkinSidebarItemsInNavbar ) ) {
                     continue;
             }
             $msgObj = wfMessage( $name );
@@ -708,7 +708,7 @@ class StrappingTemplate extends BaseTemplate {
             if ( !isset($content) ) {
               continue;
             }
-            if ( in_array( $name, $wgStrappingSkinSidebarItemsInNavbar ) ) {
+            if ( $wgStrappingSkinSidebarItemsInNavbar && in_array( $name, $wgStrappingSkinSidebarItemsInNavbar ) ) {
                     continue;
             }
             $msgObj = wfMessage( $name );
