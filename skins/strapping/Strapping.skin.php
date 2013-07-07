@@ -171,7 +171,7 @@ class StrappingTemplate extends BaseTemplate {
           $this->renderNavigation( array( 'ACTIONS' ) ); 
 
           # Sidebar items to display in navbar
-          $this->renderNavigation( array( 'SIDEBARNAV' ) );
+	  #$this->renderNavigation( array( 'SIDEBARNAV' ) );
 
           if ( !isset( $portals['TOOLBOX'] ) ) {
             $this->renderNavigation( array( 'TOOLBOX' ) ); 
