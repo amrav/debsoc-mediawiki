@@ -1,8 +1,97 @@
 /* Add your custom theme overrides here */
 #page-header {
     padding: 20px;
+    border-radius: 5px;
 }
 
 ul.nav.nav-pills.navigation {
     margin-top: 30px;
+}
+
+body {
+    background-color: #FDFDFD;
+    font-family: "adelle", sans-serif;
+    -webkit-transition: height 0.001s;
+    -moz-transition: height 0.001s;
+    -ms-transition: height 0.001s;
+    -o-transition: height 0.001s;
+    transition: height 0.001s;
+}
+
+#content {
+
+}
+
+a.external {
+    color: #000;
+    text-decoration: underline;;
+}
+
+a.external:hover {
+    color: #CC0000;
+}
+
+/* a { */
+/*     color: #000; */
+/*     text-decoration: underline; */
+/* } */
+
+/* a:hover { */
+/*     text-decoration: none; */
+/*     color: #FFF; */
+/*     background: #CC0000; */
+/* } */
+
+.nav-pills li.active a,
+.nav-pills li.active a:hover,
+.nav-pills li a:hover {
+    background: none;
+    border: none;
+    border-bottom: 4px solid;
+    border-color: #E7003E;
+    color: #E7003E;
+    border-radius: 0px;
+}
+
+.nav-pills li a {
+    background: none;
+    border: none;
+    color: #E7003E;
+    border-radius: 0px;
+}
+/* .nav-pills li.active a:hover { */
+/*     background: #E7003E; */
+/* } */
+/* .nav-pills li.active a:focus { */
+/*     background: #E7003E; */
+/* } */
+
+.nav-pills li a {
+    color: #E7003E;
+}
+
+a {
+    color: #960028;
+}
+
+a.new {
+    color: #389200;
+}
+
+a.new:hover {
+    color: #5FA92A;
+}
+
+a:hover {
+    color: #E7003E;
+}
+
+li.dropdown.open ul.dropdown-menu a:hover {
+    background: #960028;
+}
+
+input#nav-searchInput:focus {
+  border-color: rgba(243, 109, 145, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(243, 109, 145, 0.6);
+  outline: 0 none;
 }
