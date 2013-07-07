@@ -81,7 +81,6 @@ $wgDBpassword = $regs[3][0];
 $wgDBserver = $regs[4][0];
 $wgDBport = $regs[5][0];
 $wgDBname = $regs[6][0];
-$wgDBssl = true;
 } else {
 die("Failed to parse DB connection string: $_wgDBConnectionString");
 }
