@@ -176,7 +176,7 @@ $wgSMTP = array(
 );
 
 # Show the logo
-$wgLogo = "{$wgStylePath}/common/images/debsoc.jpg";
+$wgLogo = "{$wgStylePath}/common/images/debsoc-logo.png";
 
 # Don't allow users to change the skin
 $wgHiddenPrefs[] = 'skin';
