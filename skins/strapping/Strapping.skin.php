@@ -345,6 +345,9 @@ class StrappingTemplate extends BaseTemplate {
           if ($category === 'info') { continue; } ?>
 
             <ul id="footer-<?php echo $category ?>">
+	    <li id="footer-places-facebook">
+	    	<a class="external" title="DebSoc Facebook page" href="https://www.facebook.com/debsoc.kgp">Facebook</a>
+		</li>		    
               <?php foreach( $links as $link ): ?>
                 <li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li>
               <?php endforeach; ?>
