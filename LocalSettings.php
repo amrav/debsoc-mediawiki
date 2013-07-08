@@ -195,4 +195,4 @@ $wgGroupPermissions['*']['edit']=false;
 # Hope no one does something stupid with this
 $wgRawHtml = true;
 
-
+$wgFavicon = '/favicon.ico?v=2';
